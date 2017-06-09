@@ -1,5 +1,4 @@
 from flask import Flask
-
 from serial import Serial as serial
 from serial.tools import list_ports as ports
 
@@ -16,8 +15,7 @@ app = Flask(__name__)
 def hello(message):
 	# send message
     arduino.write(message.encode("ascii"))
-
-    return "successful"
+	return "successful"
 
 if __name__ == "__main__":
     app.run()

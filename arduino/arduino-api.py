@@ -13,9 +13,9 @@ app = Flask(__name__)
 
 @app.route("/arduino/send/<message>")
 def hello(message):
-	# send message
+    # send message
     arduino.write(message.encode("ascii"))
-	return "successful"
+    return "successful"
 
 if __name__ == "__main__":
     app.run()
